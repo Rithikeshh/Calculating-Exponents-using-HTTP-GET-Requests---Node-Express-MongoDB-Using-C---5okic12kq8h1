@@ -13,7 +13,7 @@ const server = http.createServer((req, res) => {
       const value2 = obj.num2;
 
       // Write code here to calculate power of a number
-      if(value1 < 0){
+      if(+value1 <= 0){
         res.writeHead(404, {"Content-Type": "text/plain"});
         res.write("The operation cannot be performed")
       }
