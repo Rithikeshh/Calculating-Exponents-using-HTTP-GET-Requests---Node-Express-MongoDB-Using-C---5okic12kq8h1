@@ -15,12 +15,13 @@ const server = http.createServer((req, res) => {
       // Write code here to calculate power of a number
       if(value1 < 0){
         res.writeHead(404, {"Content-Type": "text/plain"});
-        res.end("The operation cannot be performed")
+        res.write("The operation cannot be performed")
       }
       else{
         res.writeHead(200, {"Content-Type": "text/plain"});
         res.write(`The result is ${value1 ** value2}`)
       }
+      res.end();
     });
     }
 });
